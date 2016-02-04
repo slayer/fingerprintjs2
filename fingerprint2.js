@@ -109,7 +109,7 @@
         var values = [];
         that.each(newKeys, function(pair) {
           var value = pair.value;
-          if (typeof pair.value.join !== "undefined") {
+          if (typeof pair === "object", && typeof pair.value === "object" && typeof pair.value.join !== "undefined") {
             value = pair.value.join(";");
           }
           values.push(value);
